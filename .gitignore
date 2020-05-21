@@ -11,3 +11,4 @@
 # 忽略所有的 .pdf 文件 在 doc/ directory 下的
 # doc/**/*.pdf
 /.vscode
+a.exe
