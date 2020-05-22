@@ -10,84 +10,51 @@
 #include <iterator>
 #include <map>
 #include <unordered_map>
+#include <ios>
+#include <iomanip>
 
-    // 把不需要的字符提取出来，然后反转后再插入。
-    std::string reverseOnlyLetters(std::string S) {
-        std::map<int, char> m;
-        for(int i = 0; i < S.size(); ++i){
-            if( ('a' > S[i] || S[i] > 'z') &&
-                ('A' > S[i] || S[i] > 'Z') ){
-                m[i] = S[i];
-                S[i] = ' ';
-                
-            }
+    int maxPower(std::string s) {
+        int count = 0;
+        if(s.empty() ){
+            return count;
         }
-        while(std::string::npos != S.find(' ')){
-            S.erase(S.find(' '), 1);
-        }
-        std::reverse(S.begin(), S.end());
-        for(auto i : m){
-            S.insert(i.first, 1, i.second);
-        }
-        return S;
-    }
-
-    //双指针法
-    bool isChar(char c){
-        return ('a' > c || c > 'z') && ('A' > c || c > 'Z');
-    }
-    std::string reverseOnlyLetters2(std::string S) {
-        if(S.empty()){
-            return S;
-        }
-        char* left = &S[0];
-        char* right = &S[S.size()-1];
-        while (left < right)
-        {
-            if( isChar(*left) ){
-                left++;
-            }
-            if( isChar(*right) ){
-                right--;
-            }
-            if (!isChar(*left) && !isChar(*right))
+        char temp;
+        int tempCount = 1;
+        for(int i = 0; i < s.size(); ++i){
+            if(s[i] == temp){
+                tempCount++;
+                // std::cout << "相等" << s[i] << " " << temp << std::endl;
+            }else
             {
-                char temp = *left;
-                *left = *right;
-                *right = temp;
-                left++;
-                right--;
+                temp = s[i];
+                tempCount = 1;
             }
+            if(tempCount > count){
+                count = tempCount;
+            }
+            
         }
-        
-        return S;
+        return count;
     }
 
 
 int main()
 {
     // std::vector<std::string> nums1 = { "abcdefg" };
-    std::string nums1{"a-bC-dEf-ghIj"};
-    std::string nums2{"Test1ng-Leet=code-Q!"};
-    std::string nums3{"7_28]"};
-    std::string nums4{"a-bC-dEf-ghIj"};
+    std::string nums1{"leetcode"};
+    std::string nums2{"hooraaaaaaaaaaay"};
+    std::string nums3{"tourist]"};
     
-    
-    auto s1 = reverseOnlyLetters(nums1);
-    auto s2 = reverseOnlyLetters(nums2);
-    // auto s3 = reverseOnlyLetters2(nums3);
-    auto s4 = reverseOnlyLetters2(nums4);
-    for(auto i : s1){
-        // std::cout << i;
-    }
-    std::cout << std::endl;
-    for(auto i : s2){
-        // std::cout << i;
-    }
-    std::cout << std::endl;
-    // std::cout << s3 << std::endl;
-    std::cout << s4 << std::endl;
-    // std::this_thread::sleep_for(std::chrono::seconds(100));
+    std::cout << 
+    std::fixed << 0.1 <<
+    std::scientific << 0.1 <<
+    std::hexfloat << 0.1 << 
+    std::defaultfloat << 0.1  << std::endl;
+
+    std::cout << std::setprecision(2) << 3.1415 << std::endl;
+    std::cout << std::setw(10) << 3.1415 << std::endl;
+    std::cout << std::setw(10) << std::setfill('-') << 3.1415 << std::endl;
+
 
     return 0;
 }
