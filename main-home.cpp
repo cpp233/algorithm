@@ -156,7 +156,7 @@ std::vector<int> hashSearch_remainder(const std::vector<int>& v1, const std::vec
 }
 
 
-int main(){
+int main(int argc, char const *argv[]){
 
     std::cout << "main:" << std::endl;
 
@@ -193,3 +193,5 @@ int main(){
     std::this_thread::sleep_for(std::chrono::seconds(60));
     return 0;
 }
+
+

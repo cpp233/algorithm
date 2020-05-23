@@ -38,7 +38,7 @@
     }
 
 
-int main()
+int main(int argc, char const *argv[])
 {
     // std::vector<std::string> nums1 = { "abcdefg" };
     std::string nums1{"leetcode"};

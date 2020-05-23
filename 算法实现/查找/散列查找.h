@@ -1,5 +1,5 @@
-#ifndef _Selection_h_
-#define _Selection_h_
+#ifndef _HashSearch_h_
+#define _HashSearch_h_
 
 #include <vector>
 #include <algorithm>
