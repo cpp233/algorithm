@@ -21,3 +21,9 @@ class Solution {
         return missing;
     }
 }
+
+document.querySelectorAll("img")
+
+.src =		"https://pbs.twimg.com/media/EY291CAU8AA2QHf?format=jpg&name=900x900";
+.currentSrc = 	"https://pbs.twimg.com/media/EY291CAU8AA2QHf?format=jpg&name=900x900";
+str.match(/\/\w+\?/)
