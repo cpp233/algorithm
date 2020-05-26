@@ -1,11 +1,11 @@
-#ifndef _Selection_h_
-#define _Selection_h_
+#ifndef _INSERTSORT_H_
+#define _INSERTSORT_H_
 
 #include <vector>
 
 std::vector<int> insertSort(const std::vector<int>& v){
 
-    if(v.size() < 1){
+    if(v.size() < 2){
         return v;
     }
 

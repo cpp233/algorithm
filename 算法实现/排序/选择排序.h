@@ -1,10 +1,14 @@
-#ifndef _Selection_h_
-#define _Selection_h_
+#ifndef _SELECTIONSORT_H_
+#define _SELECTIONSORT_H_
 
 #include <vector>
 
 std::vector<int> selectionSort(const std::vector<int>& v){
-
+    
+    if(v.size() < 2){
+        return v;
+    }
+    
     auto tempV = v;
 
     for(int i=0; i < tempV.size(); ++i){

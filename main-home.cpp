@@ -65,6 +65,25 @@ std::vector<int> selectionSort(const std::vector<int>& v){
 
     return tempV;
 }
+std::vector<int> bubbleSorting(const std::vector<int>& v){
+
+    if(v.size() < 1){
+        return v;
+    }
+
+    auto tempV = v;
+    for(int i = v.size(); i > 0; --i){
+        for(int j = 0; j+1 < i; ++j){
+            if( tempV[j] > tempV[j+1] ){
+                auto temp = tempV[j+1];
+                tempV[j+1] = tempV[j];
+                tempV[j] = temp;
+            }
+        }
+    }
+
+    return tempV;
+}
 
 // 查找
 // 找出V1、V2重叠的部分
@@ -156,39 +175,42 @@ std::vector<int> hashSearch_remainder(const std::vector<int>& v1, const std::vec
 }
 
 
+void test(){
+    for(int i = 0; i <= 10 ; i++){
+        auto v1 = getRandom(i);
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::cout << "未排序:\n";
+        for(auto i : v1){
+            std::cout << i << '\t';
+        }
+        std::cout << std::endl;
+        auto v2 = bubbleSorting(v1);
+        std::cout << "排序后:\n";
+        for(auto i : v2){
+            std::cout << i << '\t';
+        }
+        std::cout << '\n' << std::endl;
+    }
+}
+
 int main(int argc, char const *argv[]){
 
     std::cout << "main:" << std::endl;
-
     int temp;
     std::cin  >> temp;
 
-    auto v1 = getRandom(temp-1);
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    auto v2 = getRandom(temp);
-
-    v1 = {0, 3, 17, 53, 66};
-    v2 = {3, 51, 14, 17, 80, 85};
+    auto v1 = getRandom(temp);
+    // std::this_thread::sleep_for(std::chrono::seconds(1));
     std::cout << "获取随机数完毕" << std::endl;
+
+
     auto start = std::chrono::steady_clock::now();
     // dosomething
-    auto v3 = hashSearch_remainder(v1, v2);
-    // auto v3 = hashSearch(v1, v2);
+    test();
     auto end = std::chrono::steady_clock::now();
     auto time = std::chrono::duration_cast<std::chrono::milliseconds>(end- start).count();
     
-    std::cout << "\nv1" << std::endl;
-    for(auto i : v1){
-        std::cout << i << " ";
-    }
-    std::cout << "\nv2" << std::endl;
-    for(auto i : v2){
-        std::cout << i << " ";
-    }
-    std::cout << "\nv3" << std::endl;
-    for(auto i : v3){
-        std::cout << i << " ";
-    }
+
     std::cout << "耗时:" << time << "ms" << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(60));
     return 0;
