@@ -111,4 +111,11 @@ if(auto i = s.find("Hello"); i != std::string::npos){
     std::cout << i << std::endl;
 }
 ~~~
-
+# c++11新增 
+* 可变数目的形参
+~~~
+void f(std::initializer_list<int> il){
+    ... //
+}
+f({1, 2, 3});
+~~~

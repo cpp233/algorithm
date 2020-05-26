@@ -1,3 +1,8 @@
+/*
+    冒泡排序
+    ·每个元素和后面的元素进行比较
+    ·大的元素排到后面
+*/
 #ifndef _BUBBLESORT_H_
 #define _BUBBLESORT_H_
 

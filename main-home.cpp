@@ -29,7 +29,6 @@ std::vector<int> insertSort(const std::vector<int>& v){
     }
 
     auto tempV = v;
-
     for(int i = 1; i < tempV.size(); ++i){
 
         if(tempV[i] < tempV[i-1]){
@@ -40,6 +39,10 @@ std::vector<int> insertSort(const std::vector<int>& v){
                         tempV[k] = tempV[k-1];
                     }
                     tempV[j] = temp;
+                    for(auto vvv : tempV){
+                        std::cout << vvv << '\t';
+                    }
+                    std::cout << std::endl;
                 }
             }
         }
@@ -176,7 +179,7 @@ std::vector<int> hashSearch_remainder(const std::vector<int>& v1, const std::vec
 
 
 void test(){
-    for(int i = 0; i <= 10 ; i++){
+    for(int i = 9; i <= 10 ; i++){
         auto v1 = getRandom(i);
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         std::cout << "未排序:\n";
@@ -184,7 +187,7 @@ void test(){
             std::cout << i << '\t';
         }
         std::cout << std::endl;
-        auto v2 = bubbleSorting(v1);
+        auto v2 = insertSort(v1);
         std::cout << "排序后:\n";
         for(auto i : v2){
             std::cout << i << '\t';
