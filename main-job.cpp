@@ -12,6 +12,7 @@
 #include <unordered_map>
 #include <ios>
 #include <iomanip>
+#include <cmath>
 
     int maxPower(std::string s) {
         int count = 0;
@@ -45,17 +46,16 @@ int main(int argc, char const *argv[])
     std::string nums2{"hooraaaaaaaaaaay"};
     std::string nums3{"tourist]"};
     
-    std::cout << 
-    std::fixed << 0.1 <<
-    std::scientific << 0.1 <<
-    std::hexfloat << 0.1 << 
-    std::defaultfloat << 0.1  << std::endl;
+    char a[9]{"Hello"};
+    std::cout << sizeof(a) << '\n';
+    std::cout << sizeof(char) << std::endl;
+    for(int i = 0; i < sizeof(a)/sizeof(char); ++i){
+        std::cout <<  a[i] << ' ';
+    }
 
-    std::cout << std::setprecision(2) << 3.1415 << std::endl;
-    std::cout << std::setw(10) << 3.1415 << std::endl;
-    std::cout << std::setw(10) << std::setfill('-') << 3.1415 << std::endl;
-
-
+    int value = 10;
+    const int *p1 = &value;
     return 0;
+
 }
 
