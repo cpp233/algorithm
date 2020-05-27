@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML标签测试用</title>
+    <style>
+        table{
+            border: 1px solid black;
+        }
+        colgroup {
+            width: 90%;
+            
+        }
+        .c1 {
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+
+    <object type="application/pdf"
+    data="H0120-190.pdf"
+    width="250"
+    height="200">
+    </object>
+
+
+    <table>
+        <caption>表格标题</caption>
+        <colgroup>
+            <col class="c1" span = "2">
+            <col class="c2">
+            <col class="c3">
+        </colgroup>
+        <thead>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>boot1</td>
+                <td>boot2</td>
+                <td>boot3</td>
+                <td>boot4</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <form action="https://example.com/api"
+      enctype="multipart/form-data"
+      method="post">
+        用户名：<input type="text" name="submit-name"><br>
+        文件：<input type="file" name="files"><br>
+        <input type="submit" value="上传"> <input type="reset" value="清除">
+    </form>
+
+    <label>有的控件小用label：
+        <input type="checkbox" name="user">
+    </label>
+    <p></p>
+    <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" required = "true">
+    <label for="username"><abbr title="required">*</abbr></label>
+    <p></p>
+
+    <form>
+        <input type="search" id="mySearch" name="q"
+          placeholder="输入搜索词……" required>
+        <input type="submit" value="搜索">
+    </form>
+
+    <input type="email" pattern=".+@foobar.com" size="30" required>
+
+    <div>
+        <input type="email" size="40" list="defaultEmails">
+        <datalist id="defaultEmails">
+        <option value="jbond007@mi6.defence.gov.uk">
+        <option value="jbourne@unknown.net">
+        <option value="nfury@shield.org">
+        <option value="tony@starkindustries.com">
+        <option value="hulk@grrrrrrrr.arg">
+        </datalist>
+    </div>
+
+    <input type="password" autocomplete = "new-password">
+
+    <input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+
+    <p>
+    <input type="range" list="tickmarks">
+
+    <datalist id="tickmarks">
+        <option value="0" label="0%">
+        <option value="10">
+        <option value="20">
+        <option value="30">
+        <option value="40">
+        <option value="50" label="70%">
+        <option value="60">
+        <option value="70">
+        <option value="80">
+        <option value="90">
+        <option value="100" label="100%">
+    </datalist>
+    注意，浏览器生成的都是水平滑块。如果想要生成垂直滑块，可以使用 CSS 改变滑块区域的方向。
+    </p>
+    <p>
+        <input type="color" id="background" name="background"
+           value="#e66465">
+    </p>
+    <p>
+        <input type="date" id="start" name="start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31">
+    </p>
+    <p>
+        <input type="time" id="appt" name="appt"
+       min="9:00" max="18:00" required>
+
+        <small>营业时间上午9点到下午6点</small>
+    </p>
+    <label>宠物：
+        <select name="pets" multiple size="4">
+          <optgroup label="四条腿的宠物">
+            <option value="dog">狗</option>
+            <option value="cat">猫</option>
+          </optgroup>
+          <optgroup label="鸟类">
+            <option value="parrot">鹦鹉</option>
+            <option value="thrush">画眉</option>
+          </optgroup>
+        </select>
+    </label>
+    <label for="ice-cream-choice">冰淇淋：</label>
+    <input type="text" list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+    
+    <datalist id="ice-cream-flavors">
+      <option value="巧克力" label="店长推荐">
+      <option value="椰子" label="五五开吧">
+      <option value="薄荷" label="五五开吧">
+      <option value="草莓" label="五五开吧">
+      <option value="香草" label="别点，有毒">
+    </datalist>
+
+    <p>
+        <input type="number" name="a" value="10"> +
+        <input type="number" name="b" value="10"> =
+        <output name="result">20</output>
+    </p>
+
+    <p>
+        <progress id="file" max="1">  </progress>
+        <progress id="file" max="100" value="70"> 70% </progress>
+    </p>
+    <p>
+        <meter id="fuel" name="fuel"
+            min="0" max="100"
+            low="33" high="66" optimum="80"
+            value="50">
+            at 50/100
+        </meter>
+    </p>
+
+    <div>
+        <dialog open>
+            <form method="dialog">
+              <input type="text">
+              <button type="submit" value="foo">提交</button>
+            </form>
+          </dialog>
+    </div>
+
+    <div>
+        <details>
+            这是一段解释文本。
+            </details>
+    </div>
+</body>
+
+<script>
+
+</script>
+
+</html>

@@ -41,6 +41,11 @@ code code code
     code
 ```
 　　即首尾各多行  ``` 。
+
+html风格：
+```html
+JavaScript风格：
+```javascript
 ~~~
 ~~~
 五、引用
@@ -116,4 +121,8 @@ lucy|18|woman
 十一、删除线
 
 ~~删除我吧~~
+~~~
+~~~
+十二、行内代码
+word:`key`
 ~~~
