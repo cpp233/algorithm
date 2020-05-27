@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML标签测试用</title>
+    <style>
+        p {
+            width: 50%;
+        }
+
+        .one{
+            width: 100px;
+            height: 200px;
+            background: red;
+            position: absolute;
+        }
+        .two{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+            z-index: 1;
+        }
+        .three{
+            width: 100px;
+            height: 300px;
+            background: blue;
+            position: absolute;
+            z-index: -1;
+        }
+
+        /* 自定义按钮动态效果 */
+        .btn-default {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+
+                    color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+
+            text-shadow: 0 1px 0 #fff;
+            background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+            background-image: -o-linear-gradient(top,#fff 0,#e0e0e0 100%);
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#e0e0e0));
+            background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            background-repeat: repeat-x;
+            border-color: #dbdbdb;
+            border-color: #ccc;
+        }
+
+        .btn-default:active, .open>.dropdown-toggle.btn-default {
+            background-image: none;
+        }
+        .btn-default:active, .open>.dropdown-toggle.btn-default {
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #adadad;
+        }
+        .btn-default:hover {
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #adadad;
+        }
+        .btn.active, .btn:active {
+            background-image: none;
+            outline: 0;
+            -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+            box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+        }
+
+        .btn.focus, .btn:focus, .btn:hover {
+            color: #333;
+            text-decoration: none;
+        }
+
+    </style>
+
+    <!-- <link href="//codefence.io/codefence.css" rel="stylesheet"> -->
+    <!-- <script defer type="text/javascript" src="//codefence.io/codefence.js"></script> -->
+</head>
+<body>
+
+    <!-- <code-fence lang="language" heading="heading" exports="file.ext">
+    <textarea vue-slot="code">
+    // your code here
+    </textarea>
+    </code-fence> -->
+
+    <pre>hello
+        我们<em>已经</em>
+        world</pre>
+    <p>水分子是 H<sub>2</sub>O。</p>
+    <p>勾股定理是
+        <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>
+        。</p>
+    <p>
+    一个容易写错的成语是把<em>安分守己</em>写成<u>安份守己</u>。
+    </p>
+
+
+    <p>今天特价商品：<s>三文鱼</s>（售完）</p>
+
+    <blockquote cite="https://quote.example.com">
+    <p>天才就是 1% 的天赋和99%的汗水。</p>
+    </blockquote>
+    <cite>-- 爱迪生</cite>
+    <p>更多资料请看<cite>维基百科</cite>。</p>
+
+
+    <p>
+    莎士比亚的《哈姆雷特》有一句著名的台词：
+    <q cite="https://quote.example.com">活着还是死亡，这是一个问题。</q>
+    </p>
+
+    <code>alert()</code>的作用是让网页弹出一个提示框。
+
+    <p>Windows 可以按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Del</kbd> 重启。</p>
+
+    <p>如果使用没有定义的变量，浏览器会报错：
+    <samp>Uncaught ReferenceError: foo is not defined</samp>。
+    </p>
+
+    <p>我们讨论以后决定，<mark>运行会在下周三举办</mark>。</p>
+
+    <p>文章正文</p>
+    <p><small>以上内容使用创意共享许可证。</small></p>
+
+    <p>运动会预定<time datetime="2015-06-10">下周三</time>举行。</p>
+    <p>音乐会在<time datetime="20:00">晚上八点</time>开始。</p>
+    <p>本次马拉松比赛第一名是<data value="39">张三</data></p>
+
+    <p>作者的联系方式：</p>
+
+    <address>
+      <p><a href="mailto:foo@example.com">foo@example.com</a></p>
+      <p><a href="tel:+555-34762301">+555-34762301</a></p>
+    </address>
+
+    <abbr title="HyperText Markup Language">HTML</abbr>
+
+    <del><p>会议定于5月8日举行。</p></del>
+    <ins><p>会议定于5月9日举行。</p></ins>
+
+    <ins cite="./why.html" datetime="2018-05">
+        <p>项目比原定时间提前两周结束。</p>
+    </ins>
+
+    <p>
+        通过 TCP/IP 协议连接的全球性计算机网络，叫做 <dfn>Internet</dfn>。
+    </p>
+
+    <p>
+        通过 TCP/IP 协议连接的全球性计算机网络，叫做
+    <dfn title="全球性计算机网络">Internet</dfn>。
+    </p>
+
+    <p>
+        <dfn><abbr title="acquired immune deficiency syndrome">AIDS</abbr><dfn>
+        的全称是获得性免疫缺陷综合征。
+    </p>
+
+    <ruby>
+        汉<rp>(</rp><rt>han</rt><rp>)</rp>
+        字<rp>(</rp><rt>zi</rt><rp>)</rp>
+    </ruby>
+
+    <ruby>
+        <rbc>
+          <rb>汉</rb><rp>(</rp><rt>han</rt><rp>)</rp>
+          <rb>字</rb><rp>(</rp><rt>zi</rt><rp>)</rp>
+        </rbc>
+    </ruby>
+
+
+    <p>床前明月光，<bdo dir="rtl">霜上地是疑</bdo>。</p>
+
+
+    <p><bdi>床前明月光，疑是地上霜。</bdi></p>
+
+    <!-- <div class="btn-default">
+        按钮样式
+    </div>
+
+    <div class="one">one</div>
+    <div class="two">two</div>
+    <div class="three">three</div> -->
+
+    <p><a href="http://baidu.com" target="test">foo</a></p>
+    <p><a href="http://bing.com" target="test">bar</a></p>
+
+</body>
+</html>
