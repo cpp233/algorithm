@@ -58,7 +58,7 @@ int main(int argc, char const *argv[])
             paddle1_y + paddle1_vec + paddle_h < HEIGHT){
                 paddle1_y += paddle1_vec;
             }
-            else if( key == 72 && paddle2_y > paddle2_vec){
+            if( key == 72 && paddle2_y > paddle2_vec){
                 paddle2_y -= paddle2_vec;
             }
             else if( (key == 80) && paddle2_y + paddle2_vec + 

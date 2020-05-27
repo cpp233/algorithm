@@ -1,3 +1,7 @@
+# git八进制字符串转中文
+~~~
+git config --global core.quotepath false
+~~~
 # MD 的常用语法格式   
 注意：vscode 中，可以使用 ctrl + shift + v 进行预览；
 ~~~
