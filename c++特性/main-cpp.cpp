@@ -14,12 +14,32 @@
 #include <iomanip>
 #include <cmath>
 
+class Date
+{
+private:
+    int year;
+    int month;
+    int day;
+public:
+    Date(/* args */);
+    Date(Date d){
+        year = d.year;
+    }
+    ~Date();
+};
+
+Date::Date(/* args */)
+{
+}
+
+Date::~Date()
+{
+}
 
 
 int main(int argc, char const *argv[])
 {
-    std::string s1{"loonbalxballpoon"};
-    std::cout << maxNumberOfBalloons2(s1);
+
 
     return 0;
 }
